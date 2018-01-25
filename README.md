@@ -1,5 +1,10 @@
 # Programming a Real Self-Driving Car.
 
+## System Architecture
+The architecture of the system is depicted below. The system consists of three key modules:  Perception ,Planning , and  Control . Each module consists of one or more ROS nodes, which utilize  publish/subscribe (pub-sub) and request/response patterns to communicate critical information with each other while   processing   information   that   helps   to   drive   the   car.
+
+At a high level perspective, the  Perception module includes functionality that perceives the environment using attached sensors (cameras, lidars, radars, etc.), such as lane lines, traffic lights, obstacles on the road, state of traffic lights, etc. This information is passed to the  Planning module, which includes functionality to ingest the perceived environment, and uses that to publish a series of waypoints ahead of the car along with target velocities. The waypoints constitute a projected trajectory for the car. The  Control module takes the waypoints and executes the target velocities on the car’s controller. The car is equipped with a drive-by-wire (DBW) functionality that allows the controller to set its  throttle (acceleration and deceleration),  brake and  steering angle commands. When the commands are executed, the car drives itself on the calculated trajectory. The entire   cycle   repeats   itself   continually   so   that   the   car   continues   driving. The modules are implemented as a set of ROS Nodes.
+
 ## Installation
 
 Please use **one** of the two installation options, either native **or** docker installation.
