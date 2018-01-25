@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /capstone/ros/install/setup.sh
