@@ -5,6 +5,8 @@ The architecture of the system is depicted below. The system consists of three k
 
 At a high level perspective, the  Perception module includes functionality that perceives the environment using attached sensors (cameras, lidars, radars, etc.), such as lane lines, traffic lights, obstacles on the road, state of traffic lights, etc. This information is passed to the  Planning module, which includes functionality to ingest the perceived environment, and uses that to publish a series of waypoints ahead of the car along with target velocities. The waypoints constitute a projected trajectory for the car. The  Control module takes the waypoints and executes the target velocities on the car’s controller. The car is equipped with a drive-by-wire (DBW) functionality that allows the controller to set its  throttle (acceleration and deceleration),  brake and  steering angle commands. When the commands are executed, the car drives itself on the calculated trajectory. The entire   cycle   repeats   itself   continually   so   that   the   car   continues   driving. The modules are implemented as a set of ROS Nodes.
 
+![](https://d17h27t6h515a5.cloudfront.net/topher/2017/September/59b6d115_final-project-ros-graph-v2/final-project-ros-graph-v2.png)
+
 ## Installation
 
 Please use **one** of the two installation options, either native **or** docker installation.
