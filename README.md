@@ -1,6 +1,6 @@
 # Programming Carla: Udacity's Self-driving Car
 
-![Alt Text](http://g.recordit.co/t3t8o6ZTO9.gif)
+[Video](http://g.recordit.co/t3t8o6ZTO9.gif)
 
 ## System Architecture
 The architecture of the system is depicted below. The system consists of three key modules:  Perception ,Planning , and  Control . Each module consists of one or more ROS nodes, which utilize  publish/subscribe (pub-sub) and request/response patterns to communicate critical information with each other while   processing   information   that   helps   to   drive   the   car.
